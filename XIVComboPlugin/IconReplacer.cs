@@ -656,6 +656,26 @@ namespace XIVComboPlugin
 
             // DANCER
 
+            // Mono GCDs are split into two buttons, because priority matters
+            // differently in different single-target moments. Thanks yoship.
+            // Replaces each GCD with its procced version.
+            if (Configuration.ComboPresets.HasFlag(CustomComboPreset.DancerMonoGcdFeature))
+            {
+                if (actionID == DNC.ReverseCascade)
+                {
+                    if (SearchBuffArray(DNC.BuffFlourishingFlow) || SearchBuffArray(DNC.BuffSilkenFlow))
+                        return DNC.ReverseCascade;
+                    return DNC.Cascade;
+                }
+
+                if (actionID == DNC.FountainFall)
+                {
+                    if (SearchBuffArray(DNC.BuffFlourishingSymmetry) || SearchBuffArray(DNC.BuffSilkenSymmetry))
+                        return DNC.FountainFall;
+                    return DNC.Fountain;
+                }
+            }
+            
             // AoE GCDs are split into two buttons, because priority matters
             // differently in different single-target moments. Thanks yoship.
             // Replaces each GCD with its procced version.
