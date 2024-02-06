@@ -1,8 +1,12 @@
-﻿namespace XIVComboPlugin.JobActions
+namespace XIVComboPlugin.JobActions
 {
     public static class DNC
     {
         public const uint
+            Cascade = 15989
+            ReverseCascade =15991
+            Fountain =15990
+            FountainFall = 15992
             Bladeshower = 15994,
             Bloodshower = 15996,
             Windmill = 15993,
