@@ -134,6 +134,9 @@ namespace XIVComboPlugin
         ScholarEnergyDrainFeature = 1L << 37,
 
         // DANCER
+[       CustomComboInfo("Mono GCD procs", "DNC mono procs turn into their normal abilities when not procced", 38)]
+        DancerMonoGcdFeature = 1L << 92,
+        
         [CustomComboInfo("AoE GCD procs", "DNC AoE procs turn into their normal abilities when not procced", 38)]
         DancerAoeGcdFeature = 1L << 32,
 
