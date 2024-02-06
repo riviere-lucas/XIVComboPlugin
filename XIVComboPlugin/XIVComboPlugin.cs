@@ -14,7 +14,7 @@ namespace XIVComboPlugin
 {
     class XIVComboPlugin : IDalamudPlugin
     {
-        public string Name => "XIV Combo Plugin";
+        public string Name => "XIV Combo Plugin by le REK";
 
         public XIVComboConfiguration Configuration;
 
